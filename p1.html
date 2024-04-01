@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles1.css">
+
+  <script type="text/javascript">
+    var clevertap = { event: [], profile: [], account: [], onUserLogin: [], region: 'in1', notifications: [], privacy: [] };
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+    clevertap.account.push({ "id": "Z44-Z4K-K65Z" });
+    clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
+    clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
+    (function () {
+        var wzrk = document.createElement('script');
+        wzrk.type = 'text/javascript';
+        wzrk.async = true;
+        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wzrk, s);
+    })();
+</script>
+</head>
+<body>
+
+<div class="registration-form">
+  <h2>Registration Form</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact No:</label>
+      <input type="text" id="contact" name="contact" required>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="buttons">
+      <button type="submit" onclick="onProfilePush()">Push</button>
+      <button type="button" onclick="onUserLogin()">Login</button>
+    </div>
+  </form>
+</div>
+<script src="scripts.js"></script>
+
+</body>
+</html>
